@@ -4,7 +4,7 @@ $themeColor: rgb(172, 131, 64);
   text-decoration: none;
 }
 
-section {
+section.bar {
   width: 100%;
   background-color: rgb(247, 232, 212);
   display: flex;
@@ -49,16 +49,19 @@ nav {
 
 .carousel {
   .carousel-inner {
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     width: 1200px;
     height: 600px;
-  }
-  .carousel-item {
-    img {
+    max-width: 100%;
+    .carousel-item {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center;
+      height: auto;
+      img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        object-position: 0% 60%;
+      }
     }
   }
 }
@@ -67,11 +70,10 @@ nav {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  margin: 32px;
+  margin: 2rem 2rem 10rem 2rem;
   object-position: center;
 }
-.roomRes {
-}
+
 .room {
   .roomImg {
     width: 400px;
@@ -82,6 +84,37 @@ nav {
       object-fit: contain;
       object-position: center;
     }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(129, 128, 126, 0.097);
+  .foot h5 {
+    color: rgb(75, 75, 75);
+  }
+  .openTime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    color: rgb(75, 75, 75);
+    margin-bottom: 2rem;
+    p {
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  a {
+    color: rgb(75, 75, 75);
+    margin: 0.5rem 1rem;
+    font-size: 1.5rem;
   }
 }
 
