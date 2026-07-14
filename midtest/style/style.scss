@@ -4,6 +4,12 @@ $themeColor: rgb(172, 131, 64);
   text-decoration: none;
 }
 
+*ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; 
+}
+
 section.bar {
   width: 100%;
   background-color: rgb(247, 232, 212);
@@ -18,12 +24,14 @@ h1 {
   margin: 1rem 2rem;
   padding: 0;
   flex: 4 2 300px;
+
   a {
     // margin-left: 40px;
     color: $themeColor;
   }
 }
-nav {
+
+ul.navList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -32,13 +40,20 @@ nav {
   margin: 1rem 2rem;
   padding: 0;
   flex: 5 1 400px;
-  p {
+
+  li {
     margin: 0;
     padding: 0;
+
+    ul.dropDownMenu {
+      display: none;
+    }
+
     a {
       color: $themeColor;
       text-decoration: none;
       transition: all 350ms;
+
       &:hover {
         color: white;
         text-decoration: underline;
@@ -47,15 +62,20 @@ nav {
   }
 }
 
+
+
+
 .carousel {
   .carousel-inner {
     margin: 0 auto;
     width: 1200px;
     height: 600px;
     max-width: 100%;
+
     .carousel-item {
       width: 100%;
       height: auto;
+
       img {
         width: 100%;
         height: 600px;
@@ -78,6 +98,7 @@ nav {
   .roomImg {
     width: 400px;
     height: 220px;
+
     img {
       width: 100%;
       height: 100%;
@@ -92,9 +113,11 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: rgba(129, 128, 126, 0.097);
+
   .foot h5 {
     color: rgb(75, 75, 75);
   }
+
   .openTime {
     display: flex;
     flex-direction: column;
@@ -102,6 +125,7 @@ footer {
     font-size: 0.8rem;
     color: rgb(75, 75, 75);
     margin-bottom: 2rem;
+
     p {
       box-sizing: border-box;
       margin-bottom: 5px;
@@ -111,6 +135,7 @@ footer {
 
 .links {
   display: flex;
+
   a {
     color: rgb(75, 75, 75);
     margin: 0.5rem 1rem;
