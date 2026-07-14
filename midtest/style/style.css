@@ -1,9 +1,16 @@
+@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 * a {
   text-decoration: none;
 }
 
-section.bar {
+* ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bar {
   width: 100%;
   background-color: rgb(247, 232, 212);
   display: flex;
@@ -19,29 +26,68 @@ h1 {
   flex: 4 2 300px;
 }
 h1 a {
+  margin-left: 40px;
   color: rgb(172, 131, 64);
 }
 
-nav {
+ul.navList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-end;
   box-sizing: border-box;
-  margin: 1rem 2rem;
-  padding: 0;
   flex: 5 1 400px;
 }
-nav p {
+ul.navList li {
+  position: relative;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
 }
-nav p a {
+ul.navList li .dropDownMenu {
+  display: none;
+}
+@media (min-width: 768px) {
+  ul.navList li:hover .dropDownMenu {
+    display: block;
+    opacity: 1; /*看不見但物體仍存在 需要靠visibility來讓物體消失(不會被點到)*/
+    visibility: visible; /*通常跟opacity一起用互補缺點*/
+    transform: translateY(0);
+    transition: all 500ms;
+  }
+}
+@media (min-width: 768px) {
+  ul.navList li ul.dropDownMenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); /* 往下一點點，做滑入效果 */
+    transition: all 500ms ease;
+    position: absolute; /* 絕對定位 */
+    top: 100%; /* 剛好貼在父層項目的正下方 */
+    min-width: 150px; /* 設定選單最小寬度 */
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 999; /* 確保選單不會被下方的內容遮擋 */
+  }
+  ul.navList li ul.dropDownMenu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #404040;
+    text-decoration: none;
+    white-space: nowrap; /* 防止文字因寬度不足而斷行 */
+  }
+  ul.navList li ul.dropDownMenu li a:hover {
+    background-color: rgba(237, 229, 219, 0.697);
+  }
+}
+ul.navList li a {
   color: rgb(172, 131, 64);
   text-decoration: none;
   transition: all 350ms;
 }
-nav p a:hover {
+ul.navList li a:hover {
   color: white;
   text-decoration: underline;
 }
@@ -49,7 +95,8 @@ nav p a:hover {
 .carousel .carousel-inner {
   margin: 0 auto;
   width: 1200px;
-  height: 600px;
+  height: auto;
+  max-height: 600px;
   max-width: 100%;
 }
 .carousel .carousel-inner .carousel-item {
@@ -58,7 +105,8 @@ nav p a:hover {
 }
 .carousel .carousel-inner .carousel-item img {
   width: 100%;
-  height: 600px;
+  height: auto;
+  max-height: 600px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 0% 60%;
