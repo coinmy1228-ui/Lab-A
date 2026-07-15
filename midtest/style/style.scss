@@ -1,4 +1,5 @@
-$themeColor: rgb(172, 131, 64);
+$titleColor: rgb(172, 131, 64);
+$themeColor:rgb(247, 232, 212);
 
 *a {
   text-decoration: none;
@@ -27,7 +28,7 @@ h1 {
 
   a {
     margin-left: 40px;
-    color: $themeColor;
+    color: $titleColor;
   }
 }
 
@@ -43,15 +44,19 @@ ul.navList {
     position: relative;
     margin: 0;
     padding: 10px 0;
+
     .dropDownMenu {
       display: none;
     }
+
     @media (min-width: 768px) {
       &:hover {
         .dropDownMenu {
           display: block;
-          opacity: 1; /*看不見但物體仍存在 需要靠visibility來讓物體消失(不會被點到)*/
-          visibility: visible; /*通常跟opacity一起用互補缺點*/
+          opacity: 1;
+          /*看不見但物體仍存在 需要靠visibility來讓物體消失(不會被點到)*/
+          visibility: visible;
+          /*通常跟opacity一起用互補缺點*/
           transform: translateY(0);
           transition: all 500ms;
         }
@@ -62,25 +67,33 @@ ul.navList {
       ul.dropDownMenu {
         opacity: 0;
         visibility: hidden;
-        transform: translateY(10px); /* 往下一點點，做滑入效果 */
+        transform: translateY(10px);
+        /* 往下一點點，做滑入效果 */
         transition: all 500ms ease;
 
-        position: absolute; /* 絕對定位 */
-        top: 100%; /* 剛好貼在父層項目的正下方 */
+        position: absolute;
+        /* 絕對定位 */
+        top: 100%;
+        /* 剛好貼在父層項目的正下方 */
         // left: 0;
-        min-width: 150px; /* 設定選單最小寬度 */
+        min-width: 150px;
+        /* 設定選單最小寬度 */
         background-color: #fff;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         list-style: none;
         padding: 0;
         margin: 0;
-        z-index: 999; /* 確保選單不會被下方的內容遮擋 */
+        z-index: 999;
+
+        /* 確保選單不會被下方的內容遮擋 */
         li a {
           display: block;
           padding: 10px 15px;
           color: #404040;
           text-decoration: none;
-          white-space: nowrap; /* 防止文字因寬度不足而斷行 */
+          white-space: nowrap;
+
+          /* 防止文字因寬度不足而斷行 */
           &:hover {
             background-color: rgba(237, 229, 219, 0.697);
           }
@@ -89,7 +102,7 @@ ul.navList {
     }
 
     a {
-      color: $themeColor;
+      color: $titleColor;
       text-decoration: none;
       transition: all 350ms;
 
@@ -146,6 +159,39 @@ ul.navList {
   }
 }
 
+div.Resr {
+  display: flex;
+  flex-direction: column;
+
+  div.reser {
+    padding: 0 3rem;
+  }
+
+  div.sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button #resSub {
+      display: block;
+    
+    }
+
+  }
+}
+.accordion-button:not(.collapsed) {
+    background-color: $themeColor; /* 換成您想要的背景色 */
+    color: $titleColor;            /* 換成您想要的文字顏色 */
+    box-shadow: none;          /* 移除展開時自帶的藍色陰影 */
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: rgba(0, 0, 0, 0.125); /* 保持原本邊框或自訂 */
+    box-shadow: none;                   /* 核心：清除藍色發光效果 */
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://w3.org' viewBox='0 0 16 16' fill='none' stroke='%23ac83' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+}
 footer {
   display: flex;
   flex-direction: column;
