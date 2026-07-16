@@ -125,7 +125,7 @@ ul.navList li a:hover {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  margin: 2rem 2rem 10rem 2rem;
+  margin: 5rem 2rem 5rem 2rem;
   -o-object-position: center;
      object-position: center;
 }
@@ -141,6 +141,74 @@ ul.navList li a:hover {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+}
+
+div.service div.section1 {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+@media (max-width: 960px) {
+  div.service div.section1 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+div.service div.section1 div.publicContent1 {
+  margin: 0 2rem;
+}
+div.service div.section1 div.publicContent1 h5 {
+  text-align: center;
+}
+div.service div.section1 div.publicContent1 h5 i.bi {
+  font-size: 20px;
+  color: rgb(172, 131, 64);
+}
+div.service div.section1 div.publicContent1 p.littleTitle {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+div.service div.section1 div.publicContent1 p::before {
+  content: ">>";
+  font-size: 10px;
+  color: rgb(172, 131, 64);
+}
+div.service div.section1 div.publicImg {
+  box-sizing: border-box;
+  margin: 0 4rem;
+  border-radius: 50px;
+  max-height: 40vh;
+  max-width: auto;
+  overflow: hidden;
+}
+div.service div.section1 div.publicImg img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+div.service div.publicContent2 {
+  margin-top: 2rem;
+}
+div.service div.publicContent2 h5 {
+  text-align: center;
+}
+div.service div.publicContent2 h5 i.bi {
+  font-size: 20px;
+  color: rgb(172, 131, 64);
+}
+div.service div.publicContent2 p.littleTitle {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+div.service div.publicContent2 p::before {
+  content: ">>";
+  font-size: 10px;
+  color: rgb(172, 131, 64);
 }
 
 div.Resr {
@@ -159,6 +227,12 @@ div.Resr div.sub button #resSub {
   display: block;
 }
 
+div.qa {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  max-width: 900px;
+}
+
 .accordion-button:not(.collapsed) {
   background-color: rgb(247, 232, 212); /* 換成您想要的背景色 */
   color: rgb(172, 131, 64); /* 換成您想要的文字顏色 */
@@ -171,8 +245,12 @@ div.Resr div.sub button #resSub {
   box-shadow: none; /* 核心：清除藍色發光效果 */
 }
 
-.accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://w3.org' viewBox='0 0 16 16' fill='none' stroke='%23ac83' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+div.frame {
+  padding: 5rem;
+}
+div.frame iframe {
+  width: 100%;
+  height: 30vh;
 }
 
 footer {
