@@ -120,6 +120,7 @@
     </div>
 
     <div class="Resr container container-fluid">
+      <form action="#" id="onlyForm">
       <div class="reser mt-5">
         <label for="exampleFormControlInput1" class="form-label"
           >您的信箱：</label
@@ -127,8 +128,10 @@
         <input
           type="email"
           class="form-control"
+          name="email"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+          required
         />
       </div>
       <div class="reser mt-3 mb-3">
@@ -138,7 +141,9 @@
         <textarea
           class="form-control"
           id="exampleFormControlTextarea1"
+          name="res"
           rows="10"
+          required
         ></textarea>
       </div>
       <div class="sub mb-5">
@@ -146,6 +151,7 @@
           送出
         </button>
       </div>
+      </form>
     </div>
     <div class="frame">
       <iframe
@@ -166,7 +172,7 @@
           ></i>
         </h5>
       </section>
-      <section class="links">
+      <section class="iconLinks">
         <a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
 
         <a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
@@ -180,5 +186,6 @@
     </footer>
 
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

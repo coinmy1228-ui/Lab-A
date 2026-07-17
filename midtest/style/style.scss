@@ -164,27 +164,35 @@ div.service {
     display: flex;
     align-items: center;
     box-sizing: border-box;
+
     @media (max-width: 960px) {
       flex-direction: column;
       align-items: center;
     }
+
     div.publicContent1 {
       margin: 0 2rem;
+
       h5 {
         text-align: center;
+
         i.bi {
           font-size: 20px;
           color: $titleColor;
         }
       }
+
       p.littleTitle {
         text-align: center;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        line-height: 1.8;
       }
+
       p::before {
         content: ">>";
-        font-size: 10px;
+        font-weight: bold;
+        font-size: 12px;
         color: $titleColor;
       }
     }
@@ -206,26 +214,67 @@ div.service {
       }
     }
   }
+
   div.publicContent2 {
     margin-top: 2rem;
+
     h5 {
       text-align: center;
+
       i.bi {
         font-size: 20px;
         color: $titleColor;
       }
     }
+
     p.littleTitle {
       text-align: center;
       padding-top: 1rem;
       padding-bottom: 1rem;
+      line-height: 1.8;
     }
+
     p::before {
       content: ">>";
-      font-size: 10px;
+      font-weight: bold;
+      font-size: 12px;
       color: $titleColor;
     }
   }
+}
+
+
+// 各貓房介紹
+div[class^="intro"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  div.room-content {
+    box-sizing: border-box;
+    padding: 0 2rem;
+    line-height: 1.8;
+
+  }
+
+  div.room-img {
+    box-sizing: border-box;
+    margin-left: 0 1rem;
+    max-width: 35vw;
+    height: auto;
+    border-radius: 25% 10%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+
+    img {
+      width: 110%;
+      height: auto;
+      object-position: left;
+
+
+    }
+  }
+
 }
 
 div.Resr {
@@ -254,18 +303,25 @@ div.qa {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: $themeColor; /* 換成您想要的背景色 */
-  color: $titleColor; /* 換成您想要的文字顏色 */
-  box-shadow: none; /* 移除展開時自帶的藍色陰影 */
+  background-color: $themeColor;
+  /* 換成您想要的背景色 */
+  color: $titleColor;
+  /* 換成您想要的文字顏色 */
+  box-shadow: none;
+  /* 移除展開時自帶的藍色陰影 */
 }
+
 .accordion-button:focus {
   z-index: 3;
-  border-color: rgba(0, 0, 0, 0.125); /* 保持原本邊框或自訂 */
-  box-shadow: none; /* 核心：清除藍色發光效果 */
+  border-color: rgba(0, 0, 0, 0.125);
+  /* 保持原本邊框或自訂 */
+  box-shadow: none;
+  /* 核心：清除藍色發光效果 */
 }
 
 div.frame {
   padding: 5rem;
+
   iframe {
     width: 100%;
     // min-width: 400px;
@@ -298,7 +354,7 @@ footer {
   }
 }
 
-.links {
+section.iconLinks {
   display: flex;
 
   a {

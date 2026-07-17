@@ -168,10 +168,12 @@ div.service div.section1 div.publicContent1 p.littleTitle {
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  line-height: 1.8;
 }
 div.service div.section1 div.publicContent1 p::before {
   content: ">>";
-  font-size: 10px;
+  font-weight: bold;
+  font-size: 12px;
   color: rgb(172, 131, 64);
 }
 div.service div.section1 div.publicImg {
@@ -204,11 +206,39 @@ div.service div.publicContent2 p.littleTitle {
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  line-height: 1.8;
 }
 div.service div.publicContent2 p::before {
   content: ">>";
-  font-size: 10px;
+  font-weight: bold;
+  font-size: 12px;
   color: rgb(172, 131, 64);
+}
+
+div[class^=intro] {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+div[class^=intro] div.room-content {
+  box-sizing: border-box;
+  padding: 0 2rem;
+  line-height: 1.8;
+}
+div[class^=intro] div.room-img {
+  box-sizing: border-box;
+  margin-left: 0 1rem;
+  max-width: 35vw;
+  height: auto;
+  border-radius: 25% 10%;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+div[class^=intro] div.room-img img {
+  width: 110%;
+  height: auto;
+  -o-object-position: left;
+     object-position: left;
 }
 
 div.Resr {
@@ -234,15 +264,20 @@ div.qa {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: rgb(247, 232, 212); /* 換成您想要的背景色 */
-  color: rgb(172, 131, 64); /* 換成您想要的文字顏色 */
-  box-shadow: none; /* 移除展開時自帶的藍色陰影 */
+  background-color: rgb(247, 232, 212);
+  /* 換成您想要的背景色 */
+  color: rgb(172, 131, 64);
+  /* 換成您想要的文字顏色 */
+  box-shadow: none;
+  /* 移除展開時自帶的藍色陰影 */
 }
 
 .accordion-button:focus {
   z-index: 3;
-  border-color: rgba(0, 0, 0, 0.125); /* 保持原本邊框或自訂 */
-  box-shadow: none; /* 核心：清除藍色發光效果 */
+  border-color: rgba(0, 0, 0, 0.125);
+  /* 保持原本邊框或自訂 */
+  box-shadow: none;
+  /* 核心：清除藍色發光效果 */
 }
 
 div.frame {
@@ -275,10 +310,10 @@ footer .openTime p {
   margin-bottom: 5px;
 }
 
-.links {
+section.iconLinks {
   display: flex;
 }
-.links a {
+section.iconLinks a {
   color: rgb(75, 75, 75);
   margin: 0.5rem 1rem;
   font-size: 1.5rem;
