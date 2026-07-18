@@ -216,7 +216,7 @@ div.service {
   }
 
   div.publicContent2 {
-    margin-top: 2rem;
+    margin-top: 5rem;
 
     h5 {
       text-align: center;
@@ -243,18 +243,17 @@ div.service {
   }
 }
 
-
 // 各貓房介紹
 div[class^="intro"] {
+  padding-top: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 
   div.room-content {
     box-sizing: border-box;
-    padding: 0 2rem;
+    padding: 0 3rem;
     line-height: 1.8;
-
   }
 
   div.room-img {
@@ -270,11 +269,8 @@ div[class^="intro"] {
       width: 110%;
       height: auto;
       object-position: left;
-
-
     }
   }
-
 }
 
 div.Resr {
@@ -320,7 +316,10 @@ div.qa {
 }
 
 div.frame {
-  padding: 5rem;
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 
   iframe {
     width: 100%;
