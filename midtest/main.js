@@ -10,14 +10,15 @@ function checkSubmit(event) {
   let a = userMail.value.trim();
   let b = res.value.trim();
 
-  if ((a === "") | (b === "")) {
+  if ((a === "") || (b === "")) {
     alert("內容不可為空白！");
     return;
   }
-
   alert("已送出信息！");
-  console.log("送出成功");
-  setTimeout(function () {
-    location.reload();
-  }, 2000);
+   console.log("送出成功");
+  // setTimeout(function () {
+  //   location.reload();
+  // }, 2000);
+
+ 
 }
