@@ -12,7 +12,7 @@
 
 div.bar {
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   background-color: rgb(247, 232, 212);
   display: flex;
@@ -30,7 +30,8 @@ div.bar {
 div.bar h1 {
   box-sizing: border-box;
   padding: 0;
-  flex: 4 3 200px;
+  margin: 0;
+  flex: 4 2 100px;
 }
 @media (max-width: 467px) {
   div.bar h1 {
@@ -38,7 +39,7 @@ div.bar h1 {
   }
 }
 div.bar h1 a {
-  margin-left: 40px;
+  margin-left: 20px;
   color: rgb(172, 131, 64);
 }
 @media (max-width: 467px) {

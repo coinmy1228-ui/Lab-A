@@ -14,7 +14,7 @@ $themeColor: rgb(247, 232, 212);
 
 div.bar {
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   background-color: rgb(247, 232, 212);
   display: flex;
@@ -32,14 +32,15 @@ div.bar {
   h1 {
     box-sizing: border-box;
     padding: 0;
-    flex: 4 3 200px;
+    margin: 0;
+    flex: 4 2 100px;
 
     @media (max-width: 467px) {
       flex: 0;
     }
 
     a {
-      margin-left: 40px;
+      margin-left: 20px;
       color: $titleColor;
 
       @media (max-width: 467px) {
